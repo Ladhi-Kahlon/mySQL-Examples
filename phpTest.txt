@@ -1,0 +1,42 @@
+<?php
+
+    echo "hello earth - welcome we start here. <br /> <br />";
+
+    #make database connection
+    $link = mysqli_connect("localhost", "cl56-sampled-qio","rUT^ty^h9","cl56-sampled-qio");
+    #if connection fails, stop script
+    If(mysqli_connect_error()) {
+        die("Connection Error");
+    }
+
+    $date = date('Y-m-d H:i:s');  //get current date time stamp
+
+    #INSERT INTO STATMENT
+    //$query = "INSERT INTO Users (UserName, Password, EMail, JoinDate) //VALUES('LaddiK3','apple3','laddi3@domailn.com','".$date."')";
+
+    #UPDATE STATEMENT
+    //$query = "UPDATE Users SET Password = 'one123' WHERE ID = '7'";
+
+    //mysqli_query($link $query);
+
+       
+    //get data from table
+    $query = "SELECT * FROM Users";
+
+    if($result = mysqli_query($link, $query)) {
+        
+        while($row = mysqli_fetch_array($result)) {
+            
+            print_r($row);
+            
+            
+        }
+        
+        
+    } else {
+        
+        echo "query field";
+        
+    } 
+        
+?>
