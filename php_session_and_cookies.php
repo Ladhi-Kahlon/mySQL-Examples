@@ -1,3 +1,5 @@
+<?php
+
     //session are website/server base. must be before any html code and session can be used acrros diff pagee.
     //must have session_start() comand, to get the session variables started. 
     //session varaibles exprise once user closes the browser (mainly used as temp logoin session)
@@ -30,3 +32,5 @@
     // 4. level for encryption, use unique value for salt for each user, where 3rd level $salt value is save for all.
     //example
     #echo md5(md5($userID['id'])."password");
+    
+?>
